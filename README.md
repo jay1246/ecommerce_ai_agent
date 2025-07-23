@@ -16,6 +16,25 @@
 - **Local Development**: SQLite + Excel support
 - **Rate Limited**: Protects API quotas
 
+  ## 📂 Dataset Overview
+**This project works with 3 core Excel datasets**:
+
+| File Name                          | Contents                                                                 | Sample Columns                     |
+|------------------------------------|--------------------------------------------------------------------------|------------------------------------|
+| `Product-Level Eligibility.xlsx`   | Product qualification data                                               | `product_id`, `is_eligible`, `category` |
+| `Product-Level Ad Metrics.xlsx`    | Advertising performance metrics                                          | `product_id`, `ad_spend`, `roas`, `cpc` |
+| `Product-Level Total Sales.xlsx`   | Complete sales records                                                   | `product_id`, `total_sales`, `units_sold` |
+
+### 🔄 Data Flow
+1. Excel files → **Converted to SQLite** (`python src/database.py`)
+2. Stored in `ecommerce.db`
+3. Accessed via FastAPI endpoints
+
+### 🛠️ Customizing Your Data
+1. **Structure**: Maintain the same column headers
+2. **Location**: Place files in `/data` folder
+3. **Refresh**: Rerun `database.py` after updates
+
 ## 🛠️ Tech Stack
 | Component       | Technology |
 |-----------------|------------|
