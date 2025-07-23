@@ -99,7 +99,7 @@ Push to branch (git push origin feat/awesome-feature)
 Open PR
 
 📄 License
-MIT © 2023 [Your Name] - See LICENSE for details.
+MIT © 2023 [jay1246] - See LICENSE for details.
 **
 
 
